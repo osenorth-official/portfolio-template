@@ -1,0 +1,103 @@
+/* 	
+ *		Graphit Font Family 
+ */
+
+// Black
+@font-face {
+	font-family: Graphit;
+	src: url("./fonts/Graphit-Black.woff2"), url("./fonts/Graphit-Black.woff"),
+		url("./fonts/Graphit-Black.otf");
+	font-weight: 900;
+	font-style: normal;
+	font-display: swap;
+}
+// Black-italic
+@font-face {
+	font-family: Graphit;
+	src: url("./fonts/Graphit-BlackItalic.woff2"),
+		url("./fonts/Graphit-BlackItalic.woff"),
+		url("./fonts/Graphit-BlackItalic.otf");
+	font-weight: 900;
+	font-style: italic;
+	font-display: swap;
+}
+
+// Bold
+@font-face {
+	font-family: Graphit;
+	src: url("./fonts/Graphit-Bold.woff2"), url("./fonts/Graphit-Bold.woff"),
+		url("./fonts/Graphit-Bold.otf");
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap;
+}
+// Bold-italic
+@font-face {
+	font-family: Graphit;
+	src: url("./fonts/Graphit-BoldItalic.woff2"),
+		url("./fonts/Graphit-BoldItalic.woff"),
+		url("./fonts/Graphit-BoldItalic.otf");
+	font-weight: 700;
+	font-style: italic;
+	font-display: swap;
+}
+
+// Regular
+@font-face {
+	font-family: Graphit;
+	src: url("./fonts/Graphit-Regular.woff2"), url("./fonts/Graphit-Regular.woff"),
+		url("./fonts/Graphit-Regular.otf");
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+// Regular-italic
+@font-face {
+	font-family: Graphit;
+	src: url("./fonts/Graphit-RegularItalic.woff2"),
+		url("./fonts/Graphit-RegularItalic.woff"),
+		url("./fonts/Graphit-RegularItalic.otf");
+	font-weight: 400;
+	font-style: italic;
+	font-display: swap;
+}
+
+// Light
+@font-face {
+	font-family: Graphit;
+	src: url("./fonts/Graphit-Light.woff2"), url("./fonts/Graphit-Light.woff"),
+		url("./fonts/Graphit-Light.otf");
+	font-weight: 300;
+	font-style: normal;
+	font-display: swap;
+}
+// Light-italic
+@font-face {
+	font-family: Graphit;
+	src: url("./fonts/Graphit-LightItalic.woff2"),
+		url("./fonts/Graphit-LightItalic.woff"),
+		url("./fonts/Graphit-LightItalic.otf");
+	font-weight: 300;
+	font-style: italic;
+	font-display: swap;
+}
+
+// Thin
+@font-face {
+	font-family: Graphit;
+	src: url("./fonts/Graphit-Thin.woff2"), url("./fonts/Graphit-Thin.woff"),
+		url("./fonts/Graphit-Thin.otf");
+	font-weight: 100;
+	font-style: normal;
+	font-display: swap;
+}
+// Thin-italic
+@font-face {
+	font-family: Graphit;
+	src: url("./fonts/Graphit-ThinItalic.woff2"),
+		url("./fonts/Graphit-ThinItalic.woff"),
+		url("./fonts/Graphit-ThinItalic.otf");
+	font-weight: 100;
+	font-style: italic;
+	font-display: swap;
+}

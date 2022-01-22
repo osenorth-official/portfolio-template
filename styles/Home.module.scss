@@ -1,0 +1,13 @@
+@use "./abstract" as *;
+
+.app {
+	@include flex-center-center;
+	height: 100vh;
+	height: calc(var(--vh, 1vh) * 100);
+
+	background-color: #000;
+	background-image: url("../assets/images/osenorth.png");
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: 50%;
+}
