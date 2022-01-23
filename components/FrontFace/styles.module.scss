@@ -87,7 +87,7 @@
 		--h1-margin: 0 auto;
 
 		--intro-pt: 5rem;
-		--intro-container-width: 67%;
+		--intro-container-width: 68%;
 		--intro-container-min-width: 693px;
 		--intro-container-grid-flow: column;
 	}
@@ -99,7 +99,7 @@
 		--h1-about-width: 860px;
 		--intro-pt: 4rem;
 
-		.container {
+		> .container {
 			h1 {
 				padding-right: 92px;
 			}

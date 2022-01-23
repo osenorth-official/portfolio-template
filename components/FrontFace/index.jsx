@@ -7,18 +7,14 @@ import styles from "./styles.module.scss";
  */
 export default function FrontFace({ about, intro, ...props }) {
 	return (
-		<section className={styles.front_face}>
-			<div className={styles.container}>
+		<article className={styles.front_face}>
+			<main className={styles.container}>
 				<h1 id="about">{about}</h1>
 
 				<section className={styles.quick_intro}>
-					<div className={styles.quick_intro_container}>
+					<main className={styles.quick_intro_container}>
 						{intro.map((introItem, i) => (
-							<section
-								key={i}
-								id={introItem.slug}
-								className={styles.intro_item}
-							>
+							<article key={i} className={styles.intro_item}>
 								<h2>{introItem.name}</h2>
 
 								<section className={styles.items}>
@@ -29,7 +25,7 @@ export default function FrontFace({ about, intro, ...props }) {
 											}`}
 										>
 											{introItem.contents.map((content, j) =>
-												introItem.type === "link" ? (
+												introItem?.type === "link" ? (
 													<Link key={j} href={content.link}>
 														<a>{content.name}</a>
 													</Link>
@@ -40,11 +36,11 @@ export default function FrontFace({ about, intro, ...props }) {
 										</ul>
 									}
 								</section>
-							</section>
+							</article>
 						))}
-					</div>
+					</main>
 				</section>
-			</div>
-		</section>
+			</main>
+		</article>
 	);
 }

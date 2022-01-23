@@ -1,3 +1,7 @@
+@function height($value: 100) {
+	@return calc(var(--vh, 1vh) * $value);
+}
+
 /* 	
  *		FlexBox 
  */
