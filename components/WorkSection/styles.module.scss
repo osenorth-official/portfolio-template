@@ -1,0 +1,58 @@
+@use "../../styles/abstract" as *;
+
+@include mobile {
+	.work_section {
+		--work-row-gap: 128px;
+		--container-pt: 50px;
+
+		> .container {
+			display: grid;
+			padding-top: var(--container-pt);
+
+			.indicator {
+				display: none;
+			}
+			.work {
+				display: grid;
+				row-gap: var(--work-row-gap);
+			}
+		}
+	}
+}
+
+@include tablet {
+	.work_section {
+		--indicator-height: 3.5rem;
+		--container-pt: 3rem;
+		--work-pt: 128px;
+
+		> .container {
+			.indicator {
+				@include flex-center-col;
+
+				width: fit-content;
+				padding-left: var(--screen-padding);
+
+				.vertical_bar {
+					margin-top: 0.5rem;
+					width: 1px;
+					height: var(--indicator-height);
+					background-color: var(--secondary-color);
+				}
+			}
+
+			.work {
+				padding-top: var(--work-pt);
+			}
+		}
+	}
+}
+
+@include desktopSmall {
+	.work_section {
+		--container-pt: 2rem;
+		--indicator-height: 5rem;
+		--work-row-gap: 144px;
+		--work-pt: 144px;
+	}
+}
