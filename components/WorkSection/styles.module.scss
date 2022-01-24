@@ -11,6 +11,11 @@
 
 			.indicator {
 				display: none;
+				p {
+					font: var(--Tag-300);
+					font-weight: 400;
+					color: var(--secondary-color);
+				}
 			}
 			.work {
 				display: grid;

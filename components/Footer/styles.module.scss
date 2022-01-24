@@ -19,6 +19,10 @@
 				width: fit-content;
 				text-align: center;
 
+				h1,
+				p {
+					color: var(--secondary-color);
+				}
 				h1 {
 					font: var(--H1-300);
 				}

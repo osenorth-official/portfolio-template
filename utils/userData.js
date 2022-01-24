@@ -1,3 +1,10 @@
+export const personalData = {
+	name: "Henry",
+	email: "therealjohndoe@gmail.com",
+	experience: ["User Interface", "Experience Designer"],
+	location: "California",
+};
+
 export const header = {
 	logoName: "HOME",
 
@@ -8,14 +15,20 @@ export const header = {
 		},
 		{
 			name: "CONTACT",
-			link: "/",
+			link: `mailto:${personalData.email}`,
 		},
 	],
 };
 
 export const front_face = {
-	about:
-		"Hey! I'm Henry, a twenty-four years old User Interface and Experience Designer currently based in California.",
+	about: (
+		<>
+			Hey! I&apos;m <span>{personalData.name}</span>, a twenty-four years old{" "}
+			<span>{personalData.experience[0]}</span> and{" "}
+			<span>{personalData.experience[1]}</span> currently based in{" "}
+			<span>{personalData.location}</span>.
+		</>
+	),
 
 	intro: [
 		{
@@ -122,10 +135,3 @@ export const footerInfoData = [
 		],
 	},
 ];
-
-export const personalData = {
-	name: "Henry",
-	email: "therealjohndoe@gmail.com",
-	experience: ["User Interface", "Experience Designer"],
-	location: "California",
-};

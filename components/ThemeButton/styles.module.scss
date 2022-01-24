@@ -1,0 +1,19 @@
+@use "../../styles/abstract" as *;
+
+@include mobile {
+	.theme_button {
+		position: fixed;
+		top: height(90);
+		right: var(--screen-padding);
+		// left: calc(100vw - var(--screen-padding));
+		width: 40px;
+
+		z-index: 2;
+
+		p {
+			color: var(--secondary-color);
+			font: var(--Tag-300);
+			font-weight: 400;
+		}
+	}
+}
