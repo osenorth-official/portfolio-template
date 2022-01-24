@@ -91,3 +91,41 @@ export const workExperience = [
 		},
 	},
 ];
+
+export const footerInfoData = [
+	{
+		name: "Ways to contact me",
+		type: "copy",
+		contents: [
+			{ name: "Gmail", value: "therealjohndoe@gmail.com" },
+			{ name: "Discord", value: "DopeAss#9669" },
+		],
+	},
+	{
+		name: "Social Links",
+		type: "link",
+		contents: [
+			{ name: "Instagram", link: "/" },
+			{ name: "Dribbble", link: "/" },
+			{ name: "Twitter", link: "/" },
+			{ name: "Github", link: "/" },
+			{ name: "Youtube", link: "/" },
+			{ name: "Spotify", link: "/" },
+		],
+	},
+	{
+		name: "what am i upto right now",
+		type: "text",
+		contents: [
+			"Walking my dog in the park",
+			"Making dog excuse to gawk at the hot girl",
+		],
+	},
+];
+
+export const personalData = {
+	name: "Henry",
+	email: "therealjohndoe@gmail.com",
+	experience: ["User Interface", "Experience Designer"],
+	location: "California",
+};
