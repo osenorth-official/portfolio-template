@@ -3,7 +3,7 @@
 @include mobile {
 	.work_section {
 		--work-row-gap: 128px;
-		--container-pt: 50px;
+		--container-pt: calc(50px + 1rem);
 
 		> .container {
 			display: grid;
