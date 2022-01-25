@@ -23,7 +23,11 @@ export default function Home() {
 			<Header {...header} />
 			<FrontFace {...front_face} />
 			<WorkSection workExperience={workExperience} />
-			<Footer email={personalData.email} info={footerInfoData} />
+			<Footer
+				email={personalData.email}
+				info={footerInfoData}
+				theme={colorTheme}
+			/>
 		</div>
 	);
 }

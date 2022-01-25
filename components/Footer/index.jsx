@@ -2,19 +2,25 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 
 import styles from "./styles.module.scss";
+import ArrowDark from "./assets/arrow-dark.svg";
+import ArrowLight from "./assets/arrow-light.svg";
+import CopyDark from "./assets/copy-dark.svg";
+import CopyLight from "./assets/copy-light.svg";
+import CustomImage from "../CustomImage";
 
 export default function Footer(props) {
 	return (
 		<footer className={styles.app_footer}>
 			<div className={styles.container}>
-				<ContactSection email={props.email} />
-				<InfoSection info={props.info} />
+				<ContactSection email={props.email} theme={props.theme} />
+				<InfoSection info={props.info} theme={props.theme} />
 			</div>
 		</footer>
 	);
 }
 
-function ContactSection({ email }) {
+function ContactSection({ email, theme }) {
+	console.log(theme);
 	return (
 		<section className={styles.contact}>
 			<h1>Have a great idea?</h1>
@@ -23,7 +29,12 @@ function ContactSection({ email }) {
 				<Link href={`mailto:${email}`}>
 					<a>
 						<p className={styles.text}>Let&apos;s work together</p>
-						<div className={styles.arrow_icon}></div>
+						<CustomImage
+							src={theme !== "light" ? ArrowDark : ArrowLight}
+							alt="arrow"
+							layout="fill"
+							style={styles.arrow_icon}
+						/>
 					</a>
 				</Link>
 			</button>
@@ -31,7 +42,7 @@ function ContactSection({ email }) {
 	);
 }
 
-function InfoSection({ info }) {
+function InfoSection({ info, theme }) {
 	return (
 		<section className={styles.info}>
 			<main className={styles.info_container}>
@@ -49,7 +60,7 @@ function InfoSection({ info }) {
 									>
 										{infoItem.contents.map((content, j) => {
 											if (infoItem?.type === "copy")
-												return <CopyText key={j} content={content} />;
+												return <CopyText key={j} {...{ theme, content }} />;
 											else if (infoItem?.type === "link")
 												return <LinkText key={j} content={content} />;
 											else return <p key={j}>{content}</p>;
@@ -73,7 +84,7 @@ function LinkText({ content }) {
 	);
 }
 
-function CopyText({ content }) {
+function CopyText({ content, theme }) {
 	const [copy, setCopy] = useState(false);
 
 	useEffect(() => {
@@ -90,7 +101,12 @@ function CopyText({ content }) {
 	return (
 		<div className={styles.copy_container} onClick={handleCopy}>
 			<p>{`${content.name} - ${content.value}`}</p>
-			<div className={styles.copy_symbol}></div>
+			<CustomImage
+				src={theme !== "light" ? CopyDark : CopyLight}
+				layout="fill"
+				style={styles.copy_symbol}
+				alt="copy"
+			/>
 		</div>
 	);
 }

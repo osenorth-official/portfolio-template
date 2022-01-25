@@ -8,7 +8,6 @@
 		--intro-container-grid-flow: row;
 
 		--copy-icon-width: 16px;
-		--arrow-icon-url: url("/images/arrow-small.svg");
 		--arrow-icon-width: 16px;
 
 		> .container {
@@ -39,10 +38,10 @@
 					}
 
 					.arrow_icon {
+						position: relative;
 						width: var(--arrow-icon-width);
 						aspect-ratio: 1;
 						margin-left: 0.5rem;
-						background-image: var(--arrow-icon-url);
 					}
 				}
 			}
@@ -93,9 +92,7 @@
 								}
 
 								.copy_symbol {
-									background-image: url(/images/copy-icon.svg);
-									background-size: cover;
-
+									position: relative;
 									width: var(--copy-icon-width);
 									aspect-ratio: 1;
 									margin-left: 0.2rem;
@@ -142,7 +139,6 @@
 @include desktopSmall {
 	.app_footer {
 		--copy-icon-width: 21px;
-		--arrow-icon-url: url("/images/arrow-big.svg");
 		--arrow-icon-width: 24px;
 
 		> .container {
