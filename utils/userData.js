@@ -70,6 +70,7 @@ export const workExperience = [
 			"My Objectives": ["User Testing", "Accessibility improvements"],
 		},
 
+		link: "/",
 		image: {
 			src: "/images/apple.png",
 			alt: "osenorth",
@@ -83,7 +84,7 @@ export const workExperience = [
 			],
 			"My Objectives": ["User Testing", "Accessibility improvements"],
 		},
-
+		link: "/",
 		image: {
 			src: "/images/spiderman.png",
 			alt: "osenorth",
@@ -98,6 +99,7 @@ export const workExperience = [
 			"My Objectives": ["User Testing", "Accessibility improvements"],
 		},
 
+		link: "/",
 		image: {
 			src: "/images/microsoft.png",
 			alt: "osenorth",
