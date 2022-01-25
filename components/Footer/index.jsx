@@ -51,11 +51,7 @@ function InfoSection({ info }) {
 											if (infoItem?.type === "copy")
 												return <CopyText key={j} content={content} />;
 											else if (infoItem?.type === "link")
-												return (
-													<Link key={j} href={content.link}>
-														<a>{content.name}</a>
-													</Link>
-												);
+												return <LinkText key={j} content={content} />;
 											else return <p key={j}>{content}</p>;
 										})}
 									</ul>
@@ -66,6 +62,14 @@ function InfoSection({ info }) {
 				))}
 			</main>
 		</section>
+	);
+}
+
+function LinkText({ content }) {
+	return (
+		<Link href={content.link}>
+			<a>{content.name}</a>
+		</Link>
 	);
 }
 

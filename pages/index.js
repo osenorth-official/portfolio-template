@@ -3,6 +3,8 @@ import FrontFace from "@/components/FrontFace";
 import Header from "@/components/Header";
 import ThemeButton from "@/components/ThemeButton";
 import WorkSection from "@/components/WorkSection";
+
+import styles from "../styles/Home.module.scss";
 import useTheme from "@/utils/customHooks/useTheme";
 import {
 	footerInfoData,
@@ -11,7 +13,6 @@ import {
 	personalData,
 	workExperience,
 } from "@/utils/userData";
-import styles from "../styles/Home.module.scss";
 
 export default function Home() {
 	const [colorTheme, toggleTheme] = useTheme("light");
@@ -22,7 +23,6 @@ export default function Home() {
 			<Header {...header} />
 			<FrontFace {...front_face} />
 			<WorkSection workExperience={workExperience} />
-
 			<Footer email={personalData.email} info={footerInfoData} />
 		</div>
 	);

@@ -5,12 +5,12 @@ export default function ActivityCard({ infoData, image, ...props }) {
 	const keys = Object.keys(infoData);
 
 	return (
-		<article className={styles.activityCard}>
+		<section className={styles.activityCard}>
 			<main className={styles.container}>
 				<section className={styles.info}>
 					<main className={styles.info_container}>
 						{keys.map((item, i) => (
-							<article key={i} className={styles.infoItem}>
+							<section key={i} className={styles.infoItem}>
 								<h2>{item}</h2>
 
 								<section className={styles.items}>
@@ -20,7 +20,7 @@ export default function ActivityCard({ infoData, image, ...props }) {
 										))}
 									</ul>
 								</section>
-							</article>
+							</section>
 						))}
 					</main>
 				</section>
@@ -34,6 +34,6 @@ export default function ActivityCard({ infoData, image, ...props }) {
 					/>
 				</section>
 			</main>
-		</article>
+		</section>
 	);
 }
