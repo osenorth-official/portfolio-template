@@ -20,7 +20,6 @@ export default function Footer(props) {
 }
 
 function ContactSection({ email, theme }) {
-	console.log(theme);
 	return (
 		<section className={styles.contact}>
 			<h1>Have a great idea?</h1>

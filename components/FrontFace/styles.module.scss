@@ -2,7 +2,7 @@
 
 @include mobile {
 	.front_face {
-		--front_face-pt: 5rem;
+		--front_face-pt: 4rem;
 
 		--h1-about-width: 100%;
 		--h1-about-max-width: 516px;
@@ -84,7 +84,7 @@
 
 @include tablet {
 	.front_face {
-		--front_face-pt: 7rem;
+		--front_face-pt: 6rem;
 
 		--h1-about-width: 516px;
 		--h1-about-max-width: fit-content;
@@ -99,7 +99,7 @@
 
 @include desktopSmall {
 	.front_face {
-		--front_face-pt: 7.875rem;
+		--front_face-pt: 6.875rem;
 		--h1-about-width: 860px;
 		--intro-pt: 4rem;
 

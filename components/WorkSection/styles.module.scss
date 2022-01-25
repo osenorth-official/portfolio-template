@@ -3,7 +3,7 @@
 @include mobile {
 	.work_section {
 		--work-row-gap: 128px;
-		--container-pt: calc(50px + 1rem);
+		--work-pt: calc(50px + 1rem);
 
 		> .container {
 			display: grid;
@@ -20,6 +20,7 @@
 			.work {
 				display: grid;
 				row-gap: var(--work-row-gap);
+				padding-top: var(--work-pt);
 			}
 		}
 	}
@@ -44,10 +45,6 @@
 					height: var(--indicator-height);
 					background-color: var(--secondary-color);
 				}
-			}
-
-			.work {
-				padding-top: var(--work-pt);
 			}
 		}
 	}

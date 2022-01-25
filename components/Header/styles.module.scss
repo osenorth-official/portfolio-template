@@ -2,10 +2,16 @@
 
 @include mobile {
 	.app_header {
-		--header-pt: 2.5rem;
+		--header-pt: 1rem;
 		--navItems-margin: 2rem;
 
-		padding: var(--header-pt) var(--screen-padding) 0 var(--screen-padding);
+		padding: 1.5rem var(--screen-padding) 1rem var(--screen-padding);
+		margin-top: var(--header-pt);
+
+		position: sticky;
+		top: 0;
+		z-index: 3;
+		background-color: var(--primary-color);
 
 		> .container {
 			@include flex-center-sb;
@@ -51,14 +57,14 @@
 
 @include tablet {
 	.app_header {
-		--header-pt: 3.5rem;
+		--header-pt: 2rem;
 		--navItems-margin: 3rem;
 	}
 }
 
 @include desktopSmall {
 	.app_header {
-		--header-pt: 5rem;
+		--header-pt: 3.5rem;
 		--navItems-margin: 4.5rem;
 	}
 }
