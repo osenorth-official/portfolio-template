@@ -11,7 +11,7 @@ export const header = {
 	navItems: [
 		{
 			name: "WORK",
-			link: "/",
+			link: "/#work",
 		},
 		{
 			name: "CONTACT",

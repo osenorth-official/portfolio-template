@@ -10,7 +10,7 @@ export default function WorkSection({ workExperience }) {
 					<div className={styles.vertical_bar}></div>
 				</section>
 
-				<main className={styles.work}>
+				<main className={styles.work} id="work">
 					{workExperience.map((experience, i) => (
 						<ActivityCard {...experience} key={i} />
 					))}
