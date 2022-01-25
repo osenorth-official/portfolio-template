@@ -5,37 +5,8 @@ export default function useTheme(colorMode) {
 	const [colorTheme, setColorTheme] = useState(colorMode);
 
 	useEffect(() => {
-		// set theme based on user system preferences
-		// const theme = window.localStorage.getItem("theme");
-		// const themeValid =
-		// 	theme === colorThemes.dark || theme === colorThemes.light;
-		// if (themeValid) {
-		// 	// set previous theme
-		// 	setColorTheme(theme);
-		// 	setElementTheme(theme);
-		// } else {
-		// setColorTheme(
-		// 	window.matchMedia("(prefers-color-scheme: dark)")?.matches
-		// 		? colorThemes.dark
-		// 		: colorThemes.light
-		// );
-		// change theme with user system theme
-		// window
-		// 	.matchMedia("(prefers-color-scheme: dark)")
-		// 	.addEventListener("change", changeUserTheme);
-		// }
-		// function changeUserTheme(event) {
-		// 	setColorTheme(event?.matches ? colorThemes.dark : colorThemes.light);
-		// }
-		// return () => {
-		// 	!themeValid &&
-		// 		window
-		// 			.matchMedia("(prefers-color-scheme: dark)")
-		// 			.removeEventListener("change", changeUserTheme);
-		// };
-
 		setElementTheme(colorMode);
-	}, []);
+	}, [colorMode]);
 
 	// change html element className as per theme
 	function setElementTheme(theme) {
