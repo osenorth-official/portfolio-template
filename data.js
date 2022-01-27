@@ -46,7 +46,7 @@ export default {
 				"METRIDE, an online alternative to metro cards that helps the users to book metro in an easier and convenient way giving a great user experience.",
 			Role: ["UX/UI Designer"],
 			link: "https://www.notion.so/Solution-to-Design-challenge-1-Metro-Mania-cdb974f2f90c4dd48701b2879d2f3ede",
-			image: "/images/metride.png",
+			image: "public/images/metride.png",
 		},
 		{
 			Project Name: "Newo App || Cab Booking App",
@@ -54,7 +54,7 @@ export default {
 				"NEWO is the only platform across the globe to integrate instant messaging and cab hailing on a single application. Users get the immense connectivity and convenience alongside a list of astonishing features, all specially designed for stylish iPhones & user-friendly Android devices.",
 			Role: ["UX/UI Designer"],
 			link: "https://www.notion.so/Newo-App-Cab-Booking-App-dee781afcb5247728a9cf46d2512a065",
-			image: "/images/newo.png",
+			image: "public/images/newo.png",
 		},
 		{
 			Project Name: "Panda App || Dating App ",
@@ -62,7 +62,7 @@ export default {
 				"PANDA will be a ‘dating app’ without being called a dating app. It will incorporate a test and certain tangible metrics that may allow/disallow people onto the PANDA framework, ensuring that most—if not all—users are an appropriate match for another.",
 			Role: ["UX/UI Designer"],
 			link: "https://www.notion.so/Panda-App-Dating-App-51a1ba9ffbb94dc69b1bae86e342b455",
-			image: "/images/panda.png",
+			image: "public/images/panda.png",
 		},
 	],
 };
