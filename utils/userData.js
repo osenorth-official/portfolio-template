@@ -1,4 +1,5 @@
 import user from "../data";
+import { colorThemes } from "./appData";
 
 export const personalData = {
 	email: user.email,
@@ -86,3 +87,5 @@ export const footerInfoData = [
 		contents: user.currentStatus,
 	},
 ];
+
+export const theme = colorThemes.light;
