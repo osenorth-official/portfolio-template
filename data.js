@@ -6,7 +6,7 @@ export default {
 		"Hey! I'm <b>Bivin Joseph</b>, a 19 years old <b>UX/UI Designer</b> and <b>Product Designer</b> currently based in <b>India</b>.",
 
 	// intro
-	accomplishments: [
+	Skills: [
 		"Problem Solving",
 		"User Research",
 		"User Interface Design",
@@ -34,11 +34,7 @@ export default {
 		},
 		{ name: "Discord", value: "Bivin#3483" },
 	],
-	currentStatus: [
-		"Walking my dog in the park",
-		"Making dog excuse to gawk at the hot girl",
-	],
-
+	
 	// work
 	// image min-dimensions: 1640x600
 	// image format: jpg, png, webp
