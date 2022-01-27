@@ -2,7 +2,7 @@ import Link from "next/link";
 import CustomImage from "../CustomImage";
 import styles from "./styles.module.scss";
 
-export default function ActivityCard({ infoData, image, link = "", ...props }) {
+export default function ActivityCard({ infoData, image, link, ...props }) {
 	const keys = Object.keys(infoData);
 
 	return (
@@ -26,31 +26,16 @@ export default function ActivityCard({ infoData, image, link = "", ...props }) {
 					</main>
 				</section>
 
-				{link !== "" ? (
-					<Link href={link}>
-						<a
-							className={styles.image}
-							target="_blank"
-							rel="noopener noreferrer"
-						>
-							<CustomImage
-								{...image}
-								layout="fill"
-								objectFit="cover"
-								style={styles.image_container}
-							/>
-						</a>
-					</Link>
-				) : (
-					<div className={styles.image}>
+				<Link href={link}>
+					<a className={styles.image} target="_blank" rel="noopener noreferrer">
 						<CustomImage
 							{...image}
 							layout="fill"
 							objectFit="cover"
 							style={styles.image_container}
 						/>
-					</div>
-				)}
+					</a>
+				</Link>
 			</main>
 		</section>
 	);

@@ -65,7 +65,7 @@ export const workExperience = user.workExperience.map((experience) => ({
 		Description: [experience.description],
 		"My Objectives": experience.objectives,
 	},
-	link: experience?.link ?? "",
+	link: experience?.link ?? null,
 	image: {
 		src: experience.image,
 		alt: experience.company,
