@@ -7,6 +7,7 @@
 		--intro-container-min-width: none;
 		--intro-container-grid-flow: row;
 
+		--copy-container-min-width: 220px;
 		--copy-icon-width: 16px;
 		--arrow-icon-width: 16px;
 
@@ -84,12 +85,12 @@
 							}
 							.copy_container {
 								@include flex-center;
-								min-width: 220px;
+								min-width: var(--copy-container-min-width);
 								cursor: pointer;
 
-								p {
-									// white-space: nowrap;
-								}
+								// p {
+								// 	white-space: nowrap;
+								// }
 
 								.copy_symbol {
 									position: relative;
@@ -129,11 +130,6 @@
 
 		> .container {
 			padding-top: 128px;
-			.copy_container {
-				// p {
-				// 	width: 100%;
-				// }
-			}
 
 			.contact .contact_button .arrow_icon {
 				margin-left: 1rem;
@@ -146,6 +142,7 @@
 	.app_footer {
 		--copy-icon-width: 21px;
 		--arrow-icon-width: 24px;
+		--copy-container-min-width: 250px;
 
 		> .container {
 			padding-top: 144px;
