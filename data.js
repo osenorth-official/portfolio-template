@@ -20,7 +20,7 @@ export default {
 		{ name: "Youtube", link: "/https://www.youtube.com/watch?v=6Nb-prB-4P0" },
 		{ name: "Spotify", link: "/" },
 	],
-	currentProfession: [
+	Experience: [
 		"Incuwise Startup Incubator(UX/UI Designer) || May 2021-Present",
 		"Freelance UX/UI Designer || Sept 2020-Present",
 		"Member of Pixelate (Design Club) || Jan 2021-Present",
