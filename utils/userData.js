@@ -2,7 +2,9 @@ import user from "../data";
 import { colorThemes } from "./appData";
 
 export const personalData = {
+	name: user.name,
 	email: user.email,
+	title: `${user.name}'s Portfolio`,
 };
 
 export const header = {
