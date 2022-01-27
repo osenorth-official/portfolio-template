@@ -9,7 +9,7 @@ export default function FrontFace({ about, intro, ...props }) {
 	return (
 		<article className={styles.front_face}>
 			<main className={styles.container}>
-				<h1 id="about">{about}</h1>
+				<h1 id="about" dangerouslySetInnerHTML={{ __html: about }}></h1>
 				<IntroSection intro={intro} />
 			</main>
 		</article>
