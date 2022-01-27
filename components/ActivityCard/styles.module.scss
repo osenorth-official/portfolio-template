@@ -56,7 +56,6 @@
 				margin-top: 3.5rem;
 
 				height: height(40);
-				max-height: height(40);
 				width: 92%;
 				min-width: min(calc(100% - 20px), 370px);
 				max-width: 764px;
@@ -91,7 +90,7 @@
 
 			width: 87.5%;
 			min-width: 764px;
-			// height: height(50);
+			height: height(50);
 			max-width: 1260px;
 		}
 	}
