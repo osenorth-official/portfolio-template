@@ -51,7 +51,9 @@ function IntroSection({ intro }) {
 function LinkText({ content }) {
 	return (
 		<Link href={content.link}>
-			<a>{content.name}</a>
+			<a target="_blank" rel="noopener noreferrer">
+				{content.name}
+			</a>
 		</Link>
 	);
 }
