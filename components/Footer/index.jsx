@@ -26,7 +26,7 @@ function ContactSection({ email, theme }) {
 
 			<button className={styles.contact_button}>
 				<Link href={`mailto:${email}`}>
-					<a>
+					<a target="_blank" rel="noopener noreferrer">
 						<p className={styles.text}>Let&apos;s work together</p>
 						<CustomImage
 							src={theme !== "light" ? ArrowDark : ArrowLight}
@@ -78,7 +78,9 @@ function InfoSection({ info, theme }) {
 function LinkText({ content }) {
 	return (
 		<Link href={content.link}>
-			<a>{content.name}</a>
+			<a target="_blank" rel="noopener noreferrer">
+				{content.name}
+			</a>
 		</Link>
 	);
 }

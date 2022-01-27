@@ -8,10 +8,11 @@
 
 		width: 40px;
 		z-index: 2;
-		// mix-blend-mode: difference;
+		mix-blend-mode: difference;
 
 		p {
-			color: var(--secondary-color);
+			// color: var(--secondary-color);
+			color: white;
 			font: var(--Tag-300);
 			font-weight: 400;
 		}

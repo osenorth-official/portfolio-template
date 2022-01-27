@@ -4,4 +4,8 @@ module.exports = {
 		locales: ["en-US"],
 		defaultLocale: "en-US",
 	},
+	images: {
+		// image domains here
+		domains: ["example.com", ""],
+	},
 };

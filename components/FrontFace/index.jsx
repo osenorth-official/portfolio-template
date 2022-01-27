@@ -9,7 +9,7 @@ export default function FrontFace({ about, intro, ...props }) {
 	return (
 		<article className={styles.front_face}>
 			<main className={styles.container}>
-				<h1 id="about">{about}</h1>
+				<h1 id="about" dangerouslySetInnerHTML={{ __html: about }}></h1>
 				<IntroSection intro={intro} />
 			</main>
 		</article>
@@ -51,7 +51,9 @@ function IntroSection({ intro }) {
 function LinkText({ content }) {
 	return (
 		<Link href={content.link}>
-			<a>{content.name}</a>
+			<a target="_blank" rel="noopener noreferrer">
+				{content.name}
+			</a>
 		</Link>
 	);
 }

@@ -27,7 +27,7 @@ export default function ActivityCard({ infoData, image, link, ...props }) {
 				</section>
 
 				<Link href={link}>
-					<a className={styles.image}>
+					<a className={styles.image} target="_blank" rel="noopener noreferrer">
 						<CustomImage
 							{...image}
 							layout="fill"

@@ -11,11 +11,12 @@ import {
 	front_face,
 	header,
 	personalData,
+	theme,
 	workExperience,
 } from "@/utils/userData";
 
 export default function Home() {
-	const [colorTheme, toggleTheme] = useTheme("light");
+	const [colorTheme, toggleTheme] = useTheme(theme);
 
 	return (
 		<div className={styles.app}>

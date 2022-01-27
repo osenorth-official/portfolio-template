@@ -1,13 +1,12 @@
+import user from "../data";
+import { colorThemes } from "./appData";
+
 export const personalData = {
-	name: "Henry",
-	email: "therealjohndoe@gmail.com",
-	experience: ["User Interface", "Experience Designer"],
-	location: "California",
+	email: user.email,
 };
 
 export const header = {
 	logoName: "HOME",
-
 	navItems: [
 		{
 			name: "WORK",
@@ -21,119 +20,72 @@ export const header = {
 };
 
 export const front_face = {
-	about: (
-		<>
-			Hey! I&apos;m <span>{personalData.name}</span>, a twenty-four years old{" "}
-			<span>{personalData.experience[0]}</span> and{" "}
-			<span>{personalData.experience[1]}</span> currently based in{" "}
-			<span>{personalData.location}</span>.
-		</>
-	),
-
+	about: user.about,
 	intro: [
 		{
 			name: "Recent Accomplishments",
 			type: "text",
-			contents: [
-				"Learned HTML + CSS",
-				"Started a side project",
-				"Cooked meal for myself and choked to death",
-			],
+			contents: user.accomplishments,
 		},
 		{
 			name: "Social Links",
 			type: "link",
-			contents: [
-				{ name: "Instagram", link: "/" },
-				{ name: "Dribbble", link: "/" },
-				{ name: "Twitter", link: "/" },
-				{ name: "Github", link: "/" },
-				{ name: "Youtube", link: "/" },
-				{ name: "Spotify", link: "/" },
-			],
+			contents: user.socialLink,
 		},
 		{
 			name: "Currently",
 			type: "text",
-			contents: ["Doing contract/freelance work", "Available for new projects"],
+			contents: user.currentProfession,
 		},
 	],
 };
 
-export const workExperience = [
-	{
-		infoData: {
-			Company: ["Apple"],
-			Description: [
-				"Looking to improve the overall quality of the product through a design thinking approach, as well as conducting Usability sessions to ensure the product appeals to our users.",
-			],
-			"My Objectives": ["User Testing", "Accessibility improvements"],
-		},
+// sample workExperience
+// [{
+// 	infoData: {
+// 		Company: ["Apple"],
+// 		Description: [
+// 			"Looking to improve the overall quality of the product through a design thinking approach, as well as conducting Usability sessions to ensure the product appeals to our users.",
+// 		],
+// 		"My Objectives": ["User Testing", "Accessibility improvements"],
+// 	},
 
-		link: "/",
-		image: {
-			src: "/images/apple.png",
-			alt: "osenorth",
-		},
-	},
-	{
-		infoData: {
-			Company: ["Apple"],
-			Description: [
-				"Looking to improve the overall quality of the product through a design thinking approach, as well as conducting Usability sessions to ensure the product appeals to our users.",
-			],
-			"My Objectives": ["User Testing", "Accessibility improvements"],
-		},
-		link: "/",
-		image: {
-			src: "/images/spiderman.png",
-			alt: "osenorth",
-		},
-	},
-	{
-		infoData: {
-			Company: ["Apple"],
-			Description: [
-				"Looking to improve the overall quality of the product through a design thinking approach, as well as conducting Usability sessions to ensure the product appeals to our users.",
-			],
-			"My Objectives": ["User Testing", "Accessibility improvements"],
-		},
+// 	link: "/",
+// 	image: {
+// 		src: "/images/apple.png",
+// 		alt: "osenorth",
+// 	},
+// },]
 
-		link: "/",
-		image: {
-			src: "/images/microsoft.png",
-			alt: "osenorth",
-		},
+export const workExperience = user.workExperience.map((experience) => ({
+	infoData: {
+		Company: [experience.company],
+		Description: [experience.description],
+		"My Objectives": experience.objectives,
 	},
-];
+	link: experience?.link ?? null,
+	image: {
+		src: experience.image,
+		alt: experience.company,
+	},
+}));
 
 export const footerInfoData = [
 	{
 		name: "Ways to contact me",
 		type: "copy",
-		contents: [
-			{ name: "Gmail", value: "therealjohndoe@gmail.com" },
-			{ name: "Discord", value: "DopeAss#9669" },
-		],
+		contents: user.contactDetails,
 	},
 	{
 		name: "Social Links",
 		type: "link",
-		contents: [
-			{ name: "Instagram", link: "/" },
-			{ name: "Dribbble", link: "/" },
-			{ name: "Twitter", link: "/" },
-			{ name: "Github", link: "/" },
-			{ name: "Youtube", link: "/" },
-			{ name: "Spotify", link: "/" },
-		],
+		contents: user.socialLink,
 	},
 	{
 		name: "what am i upto right now",
 		type: "text",
-		contents: [
-			"Walking my dog in the park",
-			"Making dog excuse to gawk at the hot girl",
-		],
+		contents: user.currentStatus,
 	},
 ];
+
+export const theme = colorThemes.light;
