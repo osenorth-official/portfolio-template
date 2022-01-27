@@ -14,21 +14,32 @@ import {
 	theme,
 	workExperience,
 } from "@/utils/userData";
+import Head from "next/head";
 
 export default function Home() {
 	const [colorTheme, toggleTheme] = useTheme(theme);
 
 	return (
-		<div className={styles.app}>
-			<ThemeButton colorTheme={colorTheme} toggleTheme={toggleTheme} />
-			<Header {...header} />
-			<FrontFace {...front_face} />
-			<WorkSection workExperience={workExperience} />
-			<Footer
-				email={personalData.email}
-				info={footerInfoData}
-				theme={colorTheme}
-			/>
-		</div>
+		<>
+			<Head>
+				<meta name="description" content={front_face.about} />
+				<meta property="og:title" content={personalData.title} />
+				<meta property="og:description" content={front_face.about} />
+				<meta property="twitter:title" content={personalData.title} />
+				<meta property="twitter:description" content={front_face.about} />
+			</Head>
+
+			<div className={styles.app}>
+				<ThemeButton colorTheme={colorTheme} toggleTheme={toggleTheme} />
+				<Header {...header} />
+				<FrontFace {...front_face} />
+				<WorkSection workExperience={workExperience} />
+				<Footer
+					email={personalData.email}
+					info={footerInfoData}
+					theme={colorTheme}
+				/>
+			</div>
+		</>
 	);
 }
