@@ -2,6 +2,7 @@
 
 @include mobile {
 	.activityCard {
+		--info-padding: 0 var(--screen-padding);
 		--info-container-width: 100%;
 		--info-container-min-width: none;
 		--info-container-grid-flow: row;
@@ -9,7 +10,7 @@
 
 		> .container {
 			.info {
-				padding: 0 var(--screen-padding);
+				padding: var(--info-padding);
 
 				> .info_container {
 					display: grid;
@@ -54,7 +55,8 @@
 				margin-right: auto;
 				margin-top: 3.5rem;
 
-				height: height(45);
+				height: height(40);
+				max-height: height(40);
 				width: 92%;
 				min-width: min(calc(100% - 20px), 370px);
 				max-width: 764px;
@@ -76,11 +78,20 @@
 		--info-container-grid-flow: column;
 		--info-container-item-max-width: 320px;
 
+		.container .info {
+			padding: 0;
+
+			.info_container {
+				grid-template-columns: 1fr 6fr 2fr;
+				justify-items: center;
+			}
+		}
 		.container .image {
 			margin-top: 5rem;
 
 			width: 87.5%;
 			min-width: 764px;
+			// height: height(50);
 			max-width: 1260px;
 		}
 	}

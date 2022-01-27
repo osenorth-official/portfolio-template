@@ -84,16 +84,17 @@
 							}
 							.copy_container {
 								@include flex-center;
-								min-width: fit-content;
+								min-width: 220px;
 								cursor: pointer;
 
 								p {
-									white-space: nowrap;
+									// white-space: nowrap;
 								}
 
 								.copy_symbol {
 									position: relative;
 									width: var(--copy-icon-width);
+									min-width: var(--copy-icon-width);
 									aspect-ratio: 1;
 									margin-left: 0.2rem;
 
@@ -128,6 +129,11 @@
 
 		> .container {
 			padding-top: 128px;
+			.copy_container {
+				// p {
+				// 	width: 100%;
+				// }
+			}
 
 			.contact .contact_button .arrow_icon {
 				margin-left: 1rem;
