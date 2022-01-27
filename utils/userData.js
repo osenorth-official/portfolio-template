@@ -40,8 +40,8 @@ export const front_face = {
 	],
 };
 
-// sample
-// {
+// sample workExperience
+// [{
 // 	infoData: {
 // 		Company: ["Apple"],
 // 		Description: [
@@ -55,7 +55,7 @@ export const front_face = {
 // 		src: "/images/apple.png",
 // 		alt: "osenorth",
 // 	},
-// },
+// },]
 
 export const workExperience = user.workExperience.map((experience) => ({
 	infoData: {

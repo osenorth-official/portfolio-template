@@ -25,7 +25,10 @@ export default {
 
 	// Footer
 	contactDetails: [
-		{ name: "Gmail", value: "therealjohndoe@gmail.com" },
+		{
+			name: "Gmail",
+			value: "therealjohndoe@gmail.com",
+		},
 		{ name: "Discord", value: "DopeAss#9669" },
 	],
 	currentStatus: [
@@ -34,6 +37,9 @@ export default {
 	],
 
 	// work
+	// image min-dimensions: 1640x600
+	// image format: jpg, png, webp
+	// if image is from an external source then add the domain in next.config.js
 	workExperience: [
 		{
 			company: "Apple",
@@ -41,7 +47,7 @@ export default {
 				"Looking to improve the overall quality of the product through a design thinking approach, as well as conducting Usability sessions to ensure the product appeals to our users.",
 			objectives: ["User Testing", "Accessibility improvements"],
 			link: "/",
-			image: "/images/spiderman.png", // min width and height
+			image: "/images/apple.png",
 		},
 		{
 			company: "Apple",
@@ -57,7 +63,7 @@ export default {
 				"Looking to improve the overall quality of the product through a design thinking approach, as well as conducting Usability sessions to ensure the product appeals to our users.",
 			objectives: ["User Testing", "Accessibility improvements"],
 			link: "/",
-			image: "/images/spiderman.png",
+			image: "/images/microsoft.png",
 		},
 	],
 };
