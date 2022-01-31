@@ -2,7 +2,9 @@ import user from "../data";
 import { colorThemes } from "./appData";
 
 export const personalData = {
+	name: user.name,
 	email: user.email,
+	title: `${user.name}'s Portfolio`,
 };
 
 export const header = {
@@ -63,7 +65,7 @@ export const workExperience = user.workExperience.map((experience) => ({
 		Description: [experience.description],
 		"My Objectives": experience.objectives,
 	},
-	link: experience?.link ?? null,
+	link: experience?.link ?? "",
 	image: {
 		src: experience.image,
 		alt: experience.company,
