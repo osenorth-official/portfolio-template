@@ -1,5 +1,6 @@
 /* eslint-disable import/no-anonymous-default-export */
 export default {
+	name: "Henry",
 	email: "therealjohndoe@gmail.com",
 	about:
 		"Hey! I'm <b>Henry</b>, a twenty-four years old <b>User Interface</b> and <b>Experience Designer</b> currently based in <b>California</b>.",
