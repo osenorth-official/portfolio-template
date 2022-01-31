@@ -50,23 +50,21 @@ function InfoSection({ info, theme }) {
 						<h2>{infoItem.name}</h2>
 
 						<section className={styles.items}>
-							<ul className={styles.items_container}>
-								{
-									<ul
-										className={`${styles.items_container} ${
-											styles[infoItem.type]
-										}`}
-									>
-										{infoItem.contents.map((content, j) => {
-											if (infoItem?.type === "copy")
-												return <CopyText key={j} {...{ theme, content }} />;
-											else if (infoItem?.type === "link")
-												return <LinkText key={j} content={content} />;
-											else return <p key={j}>{content}</p>;
-										})}
-									</ul>
-								}
-							</ul>
+							{
+								<ul
+									className={`${styles.items_container} ${
+										styles[infoItem.type]
+									}`}
+								>
+									{infoItem.contents.map((content, j) => {
+										if (infoItem?.type === "copy")
+											return <CopyText key={j} {...{ theme, content }} />;
+										else if (infoItem?.type === "link")
+											return <LinkText key={j} content={content} />;
+										else return <p key={j}>{content}</p>;
+									})}
+								</ul>
+							}
 						</section>
 					</article>
 				))}

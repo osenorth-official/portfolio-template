@@ -5,7 +5,7 @@ import ThemeButton from "@/components/ThemeButton";
 import WorkSection from "@/components/WorkSection";
 
 import styles from "../styles/Home.module.scss";
-import useTheme from "@/utils/customHooks/useTheme";
+import useColorScheme from "@/lib/customHooks/useColorScheme";
 import {
 	footerInfoData,
 	front_face,
@@ -16,8 +16,12 @@ import {
 } from "@/utils/userData";
 import Head from "next/head";
 
+const changeTheme = (theme) => {
+	document.documentElement.className = theme;
+};
+
 export default function Home() {
-	const [colorTheme, toggleTheme] = useTheme(theme);
+	const [colorTheme, toggleTheme] = useColorScheme(theme, changeTheme, false);
 
 	return (
 		<>

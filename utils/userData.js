@@ -25,19 +25,19 @@ export const front_face = {
 	about: user.about,
 	intro: [
 		{
-			name: "Recent Accomplishments",
+			name: user.accomplishments.name,
 			type: "text",
-			contents: user.accomplishments,
+			contents: user.accomplishments.value,
 		},
 		{
-			name: "Social Links",
+			name: user.socialLink.name,
 			type: "link",
-			contents: user.socialLink,
+			contents: user.socialLink.value,
 		},
 		{
-			name: "Currently",
+			name: user.currentProfession.name,
 			type: "text",
-			contents: user.currentProfession,
+			contents: user.currentProfession.value,
 		},
 	],
 };
@@ -60,11 +60,7 @@ export const front_face = {
 // },]
 
 export const workExperience = user.workExperience.map((experience) => ({
-	infoData: {
-		Company: [experience.company],
-		Description: [experience.description],
-		"My Objectives": experience.objectives,
-	},
+	infoData: experience.info,
 	link: experience?.link ?? "",
 	image: {
 		src: experience.image,
@@ -74,20 +70,21 @@ export const workExperience = user.workExperience.map((experience) => ({
 
 export const footerInfoData = [
 	{
-		name: "Ways to contact me",
+		name: user.contactDetails.name,
 		type: "copy",
-		contents: user.contactDetails,
+		contents: user.contactDetails.value,
 	},
 	{
-		name: "Social Links",
+		name: user.socialLink.name,
 		type: "link",
-		contents: user.socialLink,
+		contents: user.socialLink.value,
 	},
 	{
-		name: "what am i upto right now",
+		name: user.currentStatus.name,
 		type: "text",
-		contents: user.currentStatus,
+		contents: user.currentStatus.value,
 	},
 ];
 
-export const theme = colorThemes.light;
+export const theme =
+	user?.theme === "auto" ? "" : user?.theme ?? colorThemes.light;

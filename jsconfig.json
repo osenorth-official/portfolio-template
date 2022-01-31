@@ -6,7 +6,7 @@
 			"@/containers/*": ["components/containers/*"],
 			"@/assets/*": ["assets/*"],
 			"@/utils/*": ["utils/*"],
-			"@/hooks/*": ["hooks/*"],
+			"@/lib/*": ["lib/*"],
 			"@/styles/*": ["styles/*"]
 		}
 	}
