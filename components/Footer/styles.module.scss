@@ -64,7 +64,7 @@
 						h2 {
 							font: var(--Tag-400);
 							font-weight: normal;
-							color: var(--tertiary-color);
+							color: var(--secondary-color);
 							text-transform: uppercase;
 						}
 
@@ -81,30 +81,14 @@
 								a,
 								p {
 									font: var(--Tag-300);
-									color: var(--secondary-color);
+									color: var(--tertiary-color);
 									max-width: fit-content;
 								}
 
 								.copy_container {
 									@include flex-center;
 									width: var(--item-container-min-width);
-									cursor: pointer;
-
-									.copy_symbol {
-										position: relative;
-
-										width: var(--copy-icon-width);
-										min-width: var(--copy-icon-width);
-										aspect-ratio: 1;
-										margin-left: 0.2rem;
-
-										opacity: 0;
-										transition: opacity 0.1s ease;
-									}
-
-									&:hover .copy_symbol {
-										opacity: 1;
-									}
+									cursor: copy;
 								}
 							}
 							.link {
@@ -112,6 +96,10 @@
 								min-width: fit-content;
 								grid-auto-flow: column;
 								grid-template-rows: 1fr 1fr 1fr;
+
+								a:hover {
+									color: var(--secondary-color);
+								}
 							}
 						}
 					}
