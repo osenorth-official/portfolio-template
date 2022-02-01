@@ -4,8 +4,6 @@ import { useEffect, useState } from "react";
 import styles from "./styles.module.scss";
 import ArrowDark from "./assets/arrow-dark.svg";
 import ArrowLight from "./assets/arrow-light.svg";
-import CopyDark from "./assets/copy-dark.svg";
-import CopyLight from "./assets/copy-light.svg";
 import CustomImage from "../CustomImage";
 
 export default function Footer(props) {
@@ -100,12 +98,6 @@ function CopyText({ content, theme }) {
 	return (
 		<div className={styles.copy_container} onClick={handleCopy}>
 			<p>{`${content.name} - ${content.value}`}</p>
-			<CustomImage
-				src={theme !== "light" ? CopyDark : CopyLight}
-				layout="fill"
-				style={styles.copy_symbol}
-				alt="copy"
-			/>
 		</div>
 	);
 }

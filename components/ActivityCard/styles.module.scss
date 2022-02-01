@@ -26,7 +26,7 @@
 						h2 {
 							font: var(--Tag-400);
 							font-weight: normal;
-							color: var(--tertiary-color);
+							color: var(--secondary-color);
 							text-transform: uppercase;
 						}
 
@@ -41,7 +41,7 @@
 								a,
 								p {
 									font: var(--Tag-300);
-									color: var(--secondary-color);
+									color: var(--tertiary-color);
 									width: fit-content;
 									max-width: var(--info-container-item-max-width);
 								}
